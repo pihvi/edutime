@@ -25,7 +25,7 @@ by the student (each student responded to the question "How Educational Was This
 - LINES_OF_CODE_{EXERCISE}, how many lines of code did the students last solution have
 - FLOW_CONTROL_ELEMENT_COUNT_{EXERCISE}, amount of flow control elements (if, while, for, ...) in the solution how many lines of code did the student's last solution have
 
-Data is freely available at https://www.cs.helsinki.fi/group/rage/data/2014- sigite-difficulty-indicators/
+Data is freely available at https://www.cs.helsinki.fi/group/rage/data/2014-sigite-difficulty-indicators/
 
 ### Research methods
 Test four different ML models on the data and compare their performance on probability prediction. Test also what are the principal components for the predictions.
