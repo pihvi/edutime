@@ -6,13 +6,13 @@ df = pd.read_csv('./data/sigite2014-difficulty-data.csv', sep=';')
 spent = df.filter(regex='SECONDS_SPENT_ON_*', axis=1)
 
 
-def save_plot(name):
-    filename = 'plots/' + name + '.png'
-    plt.savefig(filename)
+def save_plot(title):
+    file = 'plots/' + title + '.png'
+    plt.savefig(file)
     plt.clf()
     plt.cla()
     plt.close()
-    return filename
+    return file
 
 
 with open('reports/seconds_spent.md', 'w') as report:
