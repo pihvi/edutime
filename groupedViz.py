@@ -17,5 +17,9 @@ for week in range(1, 2):
     prefix = 'SECONDS_SPENT_ON_viikko0' + str(week) + '_'
     for col in df.filter(regex=prefix + '.*', axis=1).columns[:2]:
         name = col.replace(prefix, '')
-        df[col].hist()
+        data = df[col]
+        med = data.median()
+        std = data.std()
+        data = data[data < med + std]
+        data.hist(bins=50)
         save_plot(name)
