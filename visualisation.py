@@ -20,5 +20,5 @@ matplotlib.rc('font', size=4)
 plt.axis('off')
 
 spent.hist()
-plt.savefig('seconds_spent', dpi=600)
+#plt.savefig('seconds_spent', dpi=600)
 #plt.show()
