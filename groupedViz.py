@@ -3,7 +3,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('./data/sigite2014-difficulty-data.csv', sep=';')
-spent = df.filter(regex='SECONDS_SPENT_ON_*', axis=1)
 
 
 def save_plot(title):
@@ -31,5 +30,15 @@ with open('reports/seconds_spent.md', 'w') as report:
             plt.axvline(med, color='red', linestyle='dashed', linewidth=2)
             filename = save_plot(name)
 
+            data = df['DIFFICULTY_viikko0' + str(week) + '_' + name]
+            data.hist(bins=5)
+            filename2 = save_plot(name + '_difficulty')
+
+            data = df['EDUCATIONAL_VALUE_viikko0' + str(week) + '_' + name]
+            data.hist(bins=5)
+            filename3 = save_plot(name + '_eduvalue')
+
             report.write('#### ' + name + ' \n')
-            report.write('![](../' + filename + ') \n')
+            report.write('times | difficulty | educational value \n')
+            report.write('--- | --- | --- \n')
+            report.write('![](../' + filename + ') | ![](../' + filename2 + ') | ![](../' + filename3 + ') \n')

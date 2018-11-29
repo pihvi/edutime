@@ -17,7 +17,7 @@ Data is from an online programming course. In addition to user id, gender (M/F),
 - PERCENTAGE_COMPILES_{EXERCISE}, percentage of states that the student was in that
 compiled
 - DIFFICULTY_{EXERCISE}, difficulty of that assignment as indicated by the student
-- EDUCA TIONAL_V ALUE_{EXERCISE}, educational value of that assignment as indicated
+- EDUCATIONAL_VALUE_{EXERCISE}, educational value of that assignment as indicated
 by the student (each student responded to the question "How Educational Was This Assignment" on a scale from 1 to 5 -- this was not used in the original study, but may be interesting for you :));
 - NUM_OF_STATES_{EXERCISE}, number of different source code states that the student visited (can be thought of as "steps taken")
 - SECONDS_IN_COMPILING_STATE_{EXERCISE}, how many seconds did the student spend in a state that did compile
