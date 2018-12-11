@@ -103,8 +103,11 @@ that curve_fit will calculate for you.
 In this part you need to guess and/or use mathematical knowledge to find
 a function that resembles your data
 """
-def func(x, a, b, c):
-    return a * np.log(b * x) + c
+def func(x, a, b, c, d, e):
+    return a*x**4 + b*x**3 + c*x**2 + d*x + e 
+    
+#def func(x, a, b, c):
+    #return a * np.log(b * x) + c
 
 """
 make the curve_fit
@@ -122,8 +125,7 @@ Use sympy to generate the latex sintax of the function
 Print the coefficients and plot the funcion.
 """
 
-#plt.plot(x, func(x, *popt), label="Fitted Curve") #same as line above \/
-plt.plot(x, func(x, popt[0], popt[1], popt[2]), label="Fitted Curve")
+#plt.plot(x, func(x, popt[0], popt[1], popt[2]), label="Fitted Curve")
 #plt.plot(x, popt[0]*x**3 + popt[1]*x**2 + popt[2]*x + popt[3], label="Fitted Curve") 
 
 #plt.legend(loc='upper left')
@@ -141,12 +143,14 @@ plt.plot(x, func(x, popt[0], popt[1], popt[2]), label="Fitted Curve")
 ##plt.plot(medTimeContainer, medDifContainer, 'o')
 ##plt.ylim(0,5)
 
-
-plt.plot(avgTimeContainer, avgEduContainer, 'or')
+newTime = np.array(sorted(x))
+plt.plot(avgTimeContainer, avgEduContainer, 'or', label="Educational value")
 plt.ylim(0,5)
-plt.plot(avgTimeContainer, avgDifContainer, 'o')
+plt.plot(avgTimeContainer, avgDifContainer, 'o', label="Difficulty value")
 plt.ylim(0,5)
+plt.plot(newTime, func(newTime, *popt),'b--', label="Fitted Curve", linewidth=4.0) #same as line above \/
+plt.legend()
 plt.show()
 ##filename6 = save_plot('_medtimeeduvalue')
-exit()
+
 
