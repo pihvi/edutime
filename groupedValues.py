@@ -93,10 +93,11 @@ with open('reports/seconds_spent.md', 'w') as report:
 
 avgTimeContainer = np.array(avgTimeContainer, dtype=float) #transform your data in a numpy array of floats 
 avgEduContainer = np.array(avgEduContainer, dtype=float) #so the curve_fit can work
-#avgDifContainer = np.array(avgDifContainer, dtype=float)
+avgDifContainer = np.array(avgDifContainer, dtype=float)
 
 x = avgTimeContainer
 y = avgEduContainer
+z = avgDifContainer
 """
 create a function to fit with your data. a, b, c and d are the coefficients
 that curve_fit will calculate for you. 
@@ -113,6 +114,7 @@ def func(x, a, b, c, d, e):
 make the curve_fit
 """
 popt, pcov = curve_fit(func, x, y)
+popt2, pcov2 = curve_fit(func, x, z)
 
 """
 Use sympy to generate the latex sintax of the function
@@ -148,9 +150,8 @@ plt.plot(avgTimeContainer, avgEduContainer, 'or', label="Educational value")
 plt.ylim(0,5)
 plt.plot(avgTimeContainer, avgDifContainer, 'o', label="Difficulty value")
 plt.ylim(0,5)
-plt.plot(newTime, func(newTime, *popt),'b--', label="Fitted Curve", linewidth=4.0) #same as line above \/
+plt.plot(newTime, func(newTime, *popt), 'g--', label="Fitted Curve", linewidth=4.0)  # same as line above \/
+plt.plot(newTime, func(newTime, *popt2), 'y--', label="Fitted Curve", linewidth=4.0)  # same as line above \/
 plt.legend()
 plt.show()
 ##filename6 = save_plot('_medtimeeduvalue')
-
-
