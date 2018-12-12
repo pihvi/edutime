@@ -153,8 +153,8 @@ plt.plot(avgTimeContainer, avgEduContainer, 'or', label="Educational value")
 plt.ylim(0,5)
 plt.plot(avgTimeContainer, avgDifContainer, 'o', label="Difficulty value")
 plt.ylim(0,5)
-plt.plot(newTime, func(newTime, *popt), 'g--', label="Fitted Curve", linewidth=4.0)  # same as line above \/
-plt.plot(newTime, func(newTime, *popt2), 'y--', label="Fitted Curve", linewidth=4.0)  # same as line above \/
+plt.plot(newTime, func(newTime, *popt), 'g--', label="Fitted curve for educational value", linewidth=4.0)  # same as line above \/
+plt.plot(newTime, func(newTime, *popt2), 'y--', label="Fitted curve for difficulty value", linewidth=4.0)  # same as line above \/
 plt.legend()
 plt.show()
 ##filename6 = save_plot('_medtimeeduvalue')
