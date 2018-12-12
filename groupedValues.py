@@ -161,3 +161,10 @@ plt.show()
 
 print("Mean squared error educational value: %.2f" % mean_squared_error(avgEduContainer, func(newTime, *popt)))
 print("Mean squared error difficulty value: %.2f" % mean_squared_error(avgDifContainer, func(newTime, *popt2)))
+
+print("Expected educational value at 5 min", func(300, *popt))
+print("Expected difficulty value at 5 min", func(300, *popt2))
+print("Expected educational value at 25 min", func(1500, *popt))
+print("Expected difficulty value at 25 min", func(1500, *popt2))
+print("Expected educational value at 60 min", func(3600, *popt))
+print("Expected difficulty value at 60 min", func(3600, *popt2))
