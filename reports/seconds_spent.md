@@ -1,6 +1,6 @@
 ## The Curve 
 Perceived educational value and difficulty versus time spent.
-![](../FittedCurve.PNG)
+![](../scrap/FittedCurves.PNG)
  
 ### Week 1 
 #### 001.Nimi 
