@@ -5,6 +5,9 @@ from scipy.optimize import curve_fit
 import sympy as sym
 import numpy
 import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
 
 df = pd.read_csv('./data/sigite2014-difficulty-data.csv', sep=';')
 
@@ -155,3 +158,6 @@ plt.plot(newTime, func(newTime, *popt2), 'y--', label="Fitted Curve", linewidth=
 plt.legend()
 plt.show()
 ##filename6 = save_plot('_medtimeeduvalue')
+
+print("Mean squared error educational value: %.2f" % mean_squared_error(avgEduContainer, func(newTime, *popt)))
+print("Mean squared error difficulty value: %.2f" % mean_squared_error(avgDifContainer, func(newTime, *popt2)))
