@@ -7,10 +7,10 @@ Final report available [here](./reports/Edutime_final_report.pdf).
 ## Project proposal
 
 ### Core idea of the project
-Predict probability of a student doing the next exercise based on past exercise behavior. This will allow changing exercise difficulty per student to reduce dropout rate.
+We wanted to see if the time consumption is related to difficulty and educational value given by the student. 
 
 ### Research questions
-What are principal components in e-learning system’s student progress data and good ML model to predict probability of student continuing the course?
+When doing work on problems in programming and in general, it is said that it is better to take short breaks once in a while. We wanted to know if there could be found a relationship between solving a problem and time. We also were interested in if educational value, difficulty value and time consumption are related to each other.
 
 ### Data
 Data is from an online programming course. In addition to user id, gender (M/F), year of birth, and whether the user had previous programming experience (true/false), the data contains the following features:
@@ -31,4 +31,4 @@ by the student (each student responded to the question "How Educational Was This
 Data is freely available at https://www.cs.helsinki.fi/group/rage/data/2014-sigite-difficulty-indicators/
 
 ### Expected results
-Student’s probability to continue to the next assignment can be modeled with significant accuracy in some cases. This will enable to give a student, close to dropping out, easier assignments on the fly to keep them on the course.
+Student’s time consumption per exercise should look like Poisson distribution or some other distribution. We also predict that there will be a certain time window in which most students make exercise. 
