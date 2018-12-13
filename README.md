@@ -2,7 +2,7 @@
 Educational Data Mining focusing on time aspect
 
 ## Project report
-Final report available [here](./reports/Edutime final report.pdf).
+Final report available [here]('./reports/Edutime final report.pdf').
 
 ## Project proposal
 
