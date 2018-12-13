@@ -1,6 +1,9 @@
 # EduTime
 Educational Data Mining focusing on time aspect
 
+## Project report
+Final report available [here](./reports/final.pdf).
+
 ## Project proposal
 
 ### Core idea of the project
@@ -26,14 +29,6 @@ by the student (each student responded to the question "How Educational Was This
 - FLOW_CONTROL_ELEMENT_COUNT_{EXERCISE}, amount of flow control elements (if, while, for, ...) in the solution how many lines of code did the student's last solution have
 
 Data is freely available at https://www.cs.helsinki.fi/group/rage/data/2014-sigite-difficulty-indicators/
-
-### Research methods
-Test four different ML models on the data and compare their performance on probability prediction. Test also what are the principal components for the predictions.
-Models to be used are:
-1. Logistic Regression
-2. Naïve Bayes
-3. Support Vector Classification
-4. Random Forest
 
 ### Expected results
 Student’s probability to continue to the next assignment can be modeled with significant accuracy in some cases. This will enable to give a student, close to dropping out, easier assignments on the fly to keep them on the course.
